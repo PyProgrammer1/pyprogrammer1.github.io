@@ -1,0 +1,291 @@
+#menu a {
+    background: url("/web/20251208064505im_/https://www.learner.org/wp-content/interactive/include/images/spacer.gif") top left no-repeat;
+   	font-family : Verdana, Arial, Monaco, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 25px;
+	font-weight: bold;
+	text-decoration: none;
+	color : #ffffff;
+   }
+#menu a:hover {
+   background-image: url("/web/20251208064505im_/https://www.learner.org/wp-content/interactive/include/images/ro-green.gif");
+   }
+#menu a:active {
+   background-image: url("/web/20251208064505im_/https://www.learner.org/wp-content/interactive/include/images/ro-green.gif");
+   }
+
+#menu b {
+ background-image: url("/web/20251208064505im_/https://www.learner.org/wp-content/interactive/include/images/ro-green.gif");
+
+}
+
+hr {
+	color : #50adde;
+	height: 1px;
+
+}
+
+
+#glossary b {
+	font-family : Verdana, Arial, Monaco, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color : #f78b09;
+}
+
+/*Class used with the flashlinks.js to hide
+    links to flash/html5 interactives*/
+.learner-hidden{
+	display: none;
+}
+
+/*responsive page styles*/
+
+.dynamicearth-header{
+  max-width: 740px;
+  margin:auto;
+}
+
+.dynamicearth-header .top-banner{
+  background-image: url('/web/20251208064505im_/https://www.learner.org/wp-content/interactive/dynamicearth/images/earth_banner_02.gif');
+}
+
+  .dynamicearth-header img{
+      display: block;
+      max-width: 100%;
+  }
+
+  .dynamicearth-header .main-banner img{
+    height: auto;
+  }
+
+.dynamicearth{
+  background-color: #ffffff;
+  max-width: 740px;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+  .dynamicearth *{
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+
+    .dynamicearth h1{
+        margin-bottom: 10px;
+        
+    }
+
+  .dynamicearth img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+  }
+
+    .dynamicearth .page-nav img{
+        display: inline-block;
+    }
+
+  .dynamicearth .content{
+    padding: 15px 10px 0;
+  }
+
+    .dynamicearth .page-fade{
+      height: 41px;
+    }
+
+.whitenav{
+  background-size: 100%  100%;
+  background-repeat: no-repeat;
+}
+
+.whitenav-spacer img{
+    display: block;
+}
+
+.whitenav.second{
+    max-width: 740px;
+    margin: auto;
+}
+
+.interactive-container{
+  position: relative;
+  max-width: 700px;
+  min-height: 342px;
+  margin: 20px auto;
+  font-size: 14px;
+  border: 1px solid #66CC00;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+  .frame{
+    display:block;
+    width: 100%;
+    padding-bottom: 2.57%;
+    background: transparent url("/web/20251208064505im_/https://www.learner.org/wp-content/interactive/dynamicearth/images/frame-sprite.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 999;
+      pointer-events: none;
+  }
+  #frame-top{
+    top:0;
+    left:0;
+  }
+
+  #frame-bottom{
+    background-position: 0 100%;
+    padding-bottom: 3%;
+    bottom:0;
+    left:0;
+  }
+
+  .loader{
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom:0;
+    right: 0;
+  }
+
+/*Screen Manager Component Base Style*/
+
+.screen-manager{
+	overflow: hidden;
+}
+
+.screen-viewer{
+	white-space: nowrap;
+	overflow: hidden;
+    z-index: 1;
+}
+
+.screen-manager .screen{
+	display: inline-block;
+	width: 100%;
+	white-space: normal;
+	vertical-align: top;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.screen.screen-hidden{
+	height: 0;
+	padding: 0;
+}
+
+.screen-content{
+	position: relative;
+	width: 100%;
+}
+
+.screen-manager .loader{
+	position: absolute;
+	top:0; right: 0; bottom: 0; left: 0;
+	background:rgba(0,0,0,.5) url('/web/20251208064505im_/https://www.learner.org/wp-content/interactive/story/images/loader.gif') no-repeat;
+	background-position: center center;
+	z-index: 300;
+}
+
+.manager-controls{
+	position: absolute;
+	bottom: 13px;
+	width: 100%;
+	padding: 0 10px;
+	overflow: hidden;
+    z-index: 2;
+}
+
+.back-button{
+	float:left;
+	z-index: 300;
+}
+
+.next-button{
+	float: right;
+	z-index: 300;
+}
+
+.screen-manager a{
+	color: inherit;
+	text-decoration: underline;
+}
+
+.screen-manager .start-popup{
+    display: none !important;
+}
+
+/*Debug Screen*/
+#debug-container {
+	position: fixed;
+	top: 50px;
+	left: -300px;
+	font-size: 12px;
+	background: rgba(0,0,0, 0.7);
+	color: #ffffff;
+	width: 300px;
+	max-width: 100%;
+	height: 420px;
+	max-height: 100%;
+	padding: 5px;
+	z-index: 99999;
+}
+
+	#debug{
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	#debug-container button{
+		display: block;
+		position: absolute;
+		left: 100%;
+		top:0;
+		height: 40px;
+        width: 80px;
+        background-color: #cccccc;
+        border-radius: 0;
+        border: 0;
+	}
+
+#debug-container.active{
+	left: 0px;
+}
+
+	#debug p {
+		margin: 0;
+	}
+
+@media all and (max-width: 740px){
+  .interactive-selector{
+    display:none;
+  }
+}
+
+/*
+     FILE ARCHIVED ON 06:45:05 Dec 08, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:30:36 Nov 04, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  capture_cache.get: 6.165
+  captures_list: 0.797
+  exclusion.robots: 0.068
+  exclusion.robots.policy: 0.051
+  esindex: 0.011
+  cdx.remote: 17.379
+  LoadShardBlock: 52.87 (3)
+  PetaboxLoader3.datanode: 73.5 (4)
+  load_resource: 153.596
+  PetaboxLoader3.resolve: 100.447
+*/
