@@ -46,14 +46,27 @@ const GameTiles = {
     )
 }
 tiles = document.getElementById(`tiles`);
-for (const game of Object.values(GameTiles)) {
-    tiles.innerHTML += `
-    <a href="${game.url}">
-        <div class="tile">
-            <img src="${game.coverIcon}" class="tile-image">
-            <h3>${game.name}</h3>
-            <p>${game.desc}</p>
-        </div>
-    </a>
-    `;
+function drawInitialTiles() {
+    for (const game of Object.values(GameTiles)) {
+        tiles.innerHTML += `
+        <a href="${game.url}">
+            <div class="tile">
+                <img src="${game.coverIcon}" class="tile-image">
+                <h3>${game.name}</h3>
+                <p>${game.desc}</p>
+            </div>
+        </a>
+        `;
+    }
 }
+
+function searchPhrase() {
+    const query = document.getElementById("search-bar").value.trim().toLowerCase();
+    document.querySelectorAll("#tiles > a").forEach(tile => {
+        const title = tile.querySelector("h3").textContent.toLowerCase();
+        const desc = tile.querySelector("p").textContent.toLowerCase();
+        tile.hidden = !title.includes(query) || !desc.includes(query);
+    });
+}
+
+drawInitialTiles();

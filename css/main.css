@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+@media (prefers-color-scheme: dark) {
+    --background-color: #080d18;
+    --foreground-color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+    --background-color: #f0f0f0;
+    --foreground-color: #000000;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +18,7 @@
 body {
   font-family: Orbitron, sans-serif;
   min-height: 100vh;
-  background-color: #080d18;
+  background-color: var(--background-color);
   isolation: isolate;
 }
 
@@ -22,7 +31,7 @@ body {
   background:
     radial-gradient(ellipse at 18% 20%, rgba(12, 104, 170, 0.18), transparent 42%),
     radial-gradient(ellipse at 85% 78%, rgba(91, 43, 167, 0.16), transparent 44%),
-    #080d18;
+    var(--background-color);
 }
 
 .metaballs-background svg {
@@ -37,7 +46,7 @@ body {
   align-items: center;
   padding: 20px 10%;
   background-color: #1a1a1a;
-  color: #ffffff;
+  color: var(--foreground-color);
   border-radius: 20px;
 }
 
@@ -55,7 +64,7 @@ body {
 }
 
 .nav-link {
-  color: #cccccc;
+  color: var(--foreground-color);
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s ease;
@@ -63,12 +72,12 @@ body {
 
 .nav-link:hover, 
 .nav-link[aria-current="page"] {
-  color: #ffffff;
+  color: var(--foreground-color);
 }
 
 .btn-cta {
   background-color: #007bc4;
-  color: white;
+  color: var(--foreground-color);
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
@@ -81,6 +90,6 @@ body {
 .text-header {
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--foreground-color);
   box-shadow: black;
 }
